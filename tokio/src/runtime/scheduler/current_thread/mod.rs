@@ -354,7 +354,7 @@ impl Context {
             // Incorrect lint, the closures are actually different types so `f`
             // cannot be passed as an argument to `enter`.
             #[allow(clippy::redundant_closure)]
-            let (c, _) = self.enter(core, || f());
+            let (c, _) = self.enter(core, || f(0));
             core = c;
         }
 
@@ -377,7 +377,7 @@ impl Context {
             // Incorrect lint, the closures are actually different types so `f`
             // cannot be passed as an argument to `enter`.
             #[allow(clippy::redundant_closure)]
-            let (c, _) = self.enter(core, || f());
+            let (c, _) = self.enter(core, || f(0));
             core = c;
         }
 
