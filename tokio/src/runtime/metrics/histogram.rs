@@ -34,7 +34,7 @@ pub(crate) struct HistogramBatch {
     resolution: u64,
 }
 
-cfg_unstable! {
+cfg_metrics! {
     /// Whether the histogram used to aggregate a metric uses a linear or
     /// logarithmic scale.
     #[derive(Debug, Copy, Clone, Eq, PartialEq)]
